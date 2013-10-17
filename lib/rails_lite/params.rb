@@ -15,6 +15,7 @@ class Params
       @params = parse_www_encoded_form(@req.body)
     end
 
+    # 3) route params
   end
 
   def [](key)
@@ -46,7 +47,7 @@ class Params
         nested = Hash[key, nested]
       end
     end
-    
+
     nested
   end
 

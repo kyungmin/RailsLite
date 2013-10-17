@@ -48,5 +48,7 @@ class ControllerBase
   end
 
   def invoke_action(name)
+    self.send(name)
+    self.render unless @already_built_response
   end
 end
